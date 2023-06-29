@@ -1,0 +1,83 @@
+/* General */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+.logo {
+  width: 45px;
+}
+
+.menu {
+  background-color: #f5f5f5;
+}
+
+#medium {
+  font-weight: 500;
+}
+
+#nav-item {
+  padding-right: 15px;
+}
+
+.btn-contact {
+  border-radius: 6px;
+  border: none;
+  background: #369;
+  color: #fff !important;
+  width: 105px;
+  height: 35px;
+  padding: 7px 17px;
+  padding-left: 5px !important;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-contact:hover {
+  background: #fff;
+  color: #000 !important;
+}
+
+#title-head {
+  font-weight: 360 !important;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+
+#title-size {
+  width: 954px;
+}
+
+#descrip-head {
+  font-size: 24px;
+  font-weight: 300 !important;
+  line-height: 150%;
+}
+
+#btn-registr {
+  border-radius: 6px;
+  width: 205px;
+  height: 60px;
+  padding: 12px 24px;
+  padding-left: 20px !important;
+  font-size: 24px;
+  font-weight: 300 !important;
+  border: none;
+}
+
+#btn-registr:hover {
+  background-color: #fff;
+  color: #000;
+  border: none;
+}
+
+header {
+  background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("./img/hero-bg-2-1.png"),
+    lightgray -130.19px -104.662px / 109.254% 130.673% no-repeat;
+  background-size: 100% 100%;
+}
