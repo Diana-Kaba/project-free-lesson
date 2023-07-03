@@ -7,46 +7,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
     <title>Безкоштовний урок</title>
+    <!-- Bootstrap & Fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="./owlcarousel/assets/owlcarousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owlcarousel/assets/owlcarousel/assets/owl.theme.default.min.css" />
+
+    <!-- Owl JS -->
+    <script src="./owlcarousel/assets/vendors/jquery.min.js"></script>
+    <script src="./owlcarousel/assets/owlcarousel/owl.carousel.js"></script>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
-
     <!-- Navigation-->
     <nav class="navbar navbar-expand-md navbar-light menu">
         <div class="container px-5">
-            <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="logo" class="logo"></a>
+            <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="logo" class="logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="medium">
-                    <li class="nav-item" id="nav-item"><a class="nav-link" href="#">Головна</a></li>
-                    <li class="nav-item" id="nav-item"><a class="nav-link" href="#">Урок</a></li>
-                    <li class="nav-item" id="nav-item"><a class="nav-link" href="#">Наші викладачі</a></li>
-                    <li class="nav-item" id="nav-item"><a class="nav-link" href="#">Питання</a></li>
-                    <li class="nav-item" id="nav-item"><a class="nav-link" href="#">Реєстрація</a></li>
-                    <li class="nav-item" id="nav-item"><button class="nav-link btn-contact" href="#">Контакти</button></li>
+                    <li class="nav-item" id="nav-item">
+                        <a class="nav-link" href="#">Головна</a>
+                    </li>
+                    <li class="nav-item" id="nav-item">
+                        <a class="nav-link" href="#">Урок</a>
+                    </li>
+                    <li class="nav-item" id="nav-item">
+                        <a class="nav-link" href="#">Наші викладачі</a>
+                    </li>
+                    <li class="nav-item" id="nav-item">
+                        <a class="nav-link" href="#">Питання</a>
+                    </li>
+                    <li class="nav-item" id="nav-item">
+                        <a class="nav-link" href="#">Реєстрація</a>
+                    </li>
+                    <li class="nav-item" id="nav-item">
+                        <button class="nav-link btn-contact" href="#">Контакти</button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Header-->
-    <header class="bg-secondary py-5">
+    <header class="py-5" id="hero">
         <div class="container px-5">
             <div class="row justify-content-center" id="img-head">
-                <div class="col-lg-8 col-xl-7 col-xxl-6 tetx" id="title-size">
-                    <div class="my-5 text-center text-xl-start">
-                        <h1 class="text-white mb-4 text-center" id="title-head">Безкоштовний урок з веб-розробки
+                <div class=".offset-4 col-8" id="title-size">
+                    <div class="my-5 text-center">
+                        <h1 class="text-white mb-4 text-center" id="title-head">
+                            Безкоштовний урок з веб-розробки
                         </h1>
-                        <p class="lead fw-normal text-white mb-4 text-center" id="descrip-head">Хочеш зрозуміти чи підходить тобі IT?
-                            <br>
+                        <p class="lead fw-normal text-white mb-4 text-center" id="descrip-head">
+                            Хочеш зрозуміти чи підходить тобі IT?
+                            <br />
                             Цей урок саме для тебе!
                         </p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
@@ -58,10 +84,64 @@
         </div>
     </header>
 
+    <!-- Slider-->
+    <section class="py-5 text-center container" id="slider">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto" id="slide-content">
+                <h2>Не втрачай можливості розпочати свій шлях в IT!</h2>
+                <p class="description text-center">
+                    За 2 години ти вивчиш основи веб-розробки та створиш свій перший
+                    сайт! <br />
+                    25.06.2023 о 18.00 буде прямий ефір на нашому каналі Youtube.
+                </p>
+            </div>
+        </div>
+        <!-- Slider row -->
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="owl-carousel owl-theme">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Links -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var owl = $(".owl-carousel");
+            owl.owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                nav: true,
+
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    600: {
+                        items: 2,
+                    },
+                    1000: {
+                        items: 4,
+                    },
+                },
+            });
+        });
+    </script>
+
+    <!-- vendors -->
+    <script src="owlcarousel/assets/vendors/highlight.js"></script>
+    <script src="owlcarousel/assets/js/app.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,31 @@
 /* General */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: #336699;
+  --secondary: #ffffff;
+  --primary: #000;
+  --background: #f5f5f5;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  height: 100%;
+  color: var(--primary);
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Header */
@@ -9,7 +34,7 @@ body {
 }
 
 .menu {
-  background-color: #f5f5f5;
+  background-color: var(--background);
 }
 
 #medium {
@@ -23,8 +48,8 @@ body {
 .btn-contact {
   border-radius: 6px;
   border: none;
-  background: #369;
-  color: #fff !important;
+  background: var(--accent);
+  color: var(--secondary) !important;
   width: 105px;
   height: 35px;
   padding: 7px 17px;
@@ -34,8 +59,8 @@ body {
 }
 
 .btn-contact:hover {
-  background: #fff;
-  color: #000 !important;
+  background: var(--secondary);
+  color: var(--primary) !important;
 }
 
 #title-head {
@@ -66,12 +91,12 @@ body {
 }
 
 #btn-registr:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--secondary);
+  color: var(--primary);
   border: none;
 }
 
-header {
+#hero {
   background: radial-gradient(
       50% 50% at 50% 50%,
       rgba(0, 0, 0, 0.6) 0%,
@@ -80,4 +105,126 @@ header {
     url("./img/hero-bg-2-1.png"),
     lightgray -130.19px -104.662px / 109.254% 130.673% no-repeat;
   background-size: 100% 100%;
+}
+
+/* Slider */
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.description {
+  text-align: center;
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 300;
+}
+
+#slide-content {
+  width: 970px;
+}
+
+/* #slider .owl-carousel {
+  margin: 2rem 0;
+}
+
+#slider .owl-carousel .item {
+  height: 10rem;
+  background: #4dc7a0;
+  padding: 1rem;
+}
+
+#slider .owl-carousel .item h4 {
+  color: var(--secondary);
+  font-weight: 400;
+  margin-top: 0rem;
+}
+
+#slider .owl-carousel .item-video {
+  height: 300px;
+}
+
+#slider #setup {
+  margin-top: 4rem;
+}
+
+#slider .demo-list h5 {
+  margin: 0;
+}
+
+#slider .owl-carousel {
+  margin: 40px 0;
+}
+
+#slider .owl-carousel .item,
+#slider .owl-carousel .owl-item {
+  height: 159px;
+} */
+
+/* #slider .owl-carousel .item {
+  background: grey;
+} */
+
+.owl-theme .owl-dots {
+  padding-top: 16px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: url(./img/slide-point.png);
+  background-position: center center;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: url(./img/slide-point-active.png);
+}
+
+.owl-theme .owl-dots:hover .owl-dot span {
+  background: url(./img/slide-point-active.png);
+}
+
+.owl-theme .owl-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  position: relative;
+  top: -96px;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 32px;
+}
+
+.owl-theme .owl-nav [class*="owl-"],
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-prev:hover {
+  background: url(./img/prev.png);
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-next:hover {
+  background: url(./img/next.png);
+}
+
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+  display: none;
+}
+
+.owl-theme .owl-nav [class*="owl-"] {
+  background-color: none !important;
+}
+
+.item {
+  width: 255px;
+  height: 160px;
 }
