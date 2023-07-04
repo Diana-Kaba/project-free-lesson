@@ -225,6 +225,8 @@ h2 {
 }
 
 .item {
-  width: 255px;
+  /* width: 255px; */
   height: 160px;
+  background-size: cover !important;
+  background-position: center !important;
 }
