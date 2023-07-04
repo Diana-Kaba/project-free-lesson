@@ -333,18 +333,6 @@ footer .logo {
   line-height: 120%;
 }
 
-#where {
-  padding-right: 100px;
-}
-
-#events {
-  padding-right: 200px;
-}
-
-#about {
-  padding-right: 170px;
-}
-
 .contact:hover {
   color: var(--accent);
 }
@@ -355,8 +343,12 @@ footer .logo {
   line-height: 24px;
 }
 
-.info-ul {
-  margin-top: -20px;
+.copyright a {
+  padding-right: 920px;
+}
+
+.social {
+  padding-top: 85px;
 }
 
 /* Arrow up */
