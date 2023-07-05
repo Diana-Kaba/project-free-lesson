@@ -307,7 +307,7 @@ h4 {
 footer {
   background: #2e2e2e;
   padding-top: 104px;
-  padding-bottom: 104px;
+  padding-bottom: 80px;
 }
 
 footer h4,
@@ -331,6 +331,23 @@ footer .logo {
   font-size: 24px;
   font-weight: 500;
   line-height: 120%;
+}
+
+.info-ul {
+  position: relative;
+  margin-top: -16px;
+}
+
+#where {
+  padding-left: 93px;
+}
+
+#events {
+  padding-left: 103px;
+}
+
+#about {
+  padding-left: 83px;
 }
 
 .contact:hover {
@@ -366,4 +383,10 @@ footer .logo {
 
 .up a img {
   width: 30px;
+  position: relative;
+  margin-left: 9px;
+}
+
+.up a:hover {
+  background-color: var(--primary);
 }
