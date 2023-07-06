@@ -29,6 +29,10 @@ a {
 }
 
 /* Header */
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 .logo {
   width: 45px;
 }
@@ -191,6 +195,7 @@ h2 {
   height: 160px;
   background-size: cover !important;
   background-position: center !important;
+  border-radius: 6px;
 }
 
 /* Our teachers */
@@ -389,4 +394,33 @@ footer .logo {
 
 .up a:hover {
   background-color: var(--primary);
+}
+
+/* Adaptive design */
+@media (max-width: 360px) {
+  #hero h1 {
+    font-size: 28px;
+    width: 320px;
+    margin-left: -25px;
+  }
+
+  #descrip-head {
+    font-size: 19px;
+    width: 338px;
+    margin-left: -35px;
+  }
+
+  #btn-registr {
+    padding-top: 6px;
+    padding-left: 15px !important;
+    padding-right: 16px !important;
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 45px;
+  }
+
+  .btn-contact {
+    padding: 7px 12px !important;
+  }
 }
