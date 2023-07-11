@@ -21,17 +21,16 @@
     <link rel="stylesheet" href="./owlcarousel/assets/owlcarousel/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="./owlcarousel/assets/owlcarousel/assets/owl.theme.default.min.css" />
 
-    <!-- Owl JS -->
-    <script src="./owlcarousel/assets/vendors/jquery.min.js"></script>
-    <script src="./owlcarousel/assets/owlcarousel/owl.carousel.js"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="./css/animate.min.css" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./css/index.css" />
 </head>
 
-<body>
+<body id="top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-md navbar-light menu">
+    <nav class="navbar navbar-expand-md navbar-light menu sticky-top">
         <div class="container px-5">
             <a class="navbar-brand" href="#"><img src="./img/logo.svg" alt="logo" class="logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -69,7 +68,7 @@
         <div class="container px-5">
             <div class="row justify-content-center" id="img-head">
                 <div class=".offset-4 col-8" id="title-size">
-                    <div class="my-5 text-center">
+                    <div class="my-5 text-center animate__animated animate__fadeIn">
                         <h1 class="text-white mb-4 text-center" id="title-head">
                             Безкоштовний урок з веб-розробки
                         </h1>
@@ -79,7 +78,8 @@
                             Цей урок саме для тебе!
                         </p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" id="btn-registr" href="#contacts">Взяти участь</a>
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" id="btn-registr" data-bs-toggle="modal"
+                                data-bs-target="#registration-modal" href="#">Взяти участь</a>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
     </header>
 
     <!-- Slider-->
-    <section class="py-5 text-center container" id="slider">
+    <section class="py-5 text-center container slideanim" id="slider">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto" id="slide-content">
                 <h2 class="title-16">Не втрачай можливості розпочати свій шлях в IT!</h2>
@@ -108,7 +108,7 @@
     </section>
 
     <!-- Our teachers -->
-    <section class="py-5 text-center container" id="teachers">
+    <section class="py-5 text-center container slideanim" id="teachers">
         <h2 class="title-16">Наші викладачі</h2>
         <h4 id="descrip-15">
             Це – досвідчені фахівці, які мають багаторічний досвід у веб-розробці та
@@ -150,7 +150,7 @@
     </section>
 
     <!-- QA -->
-    <section class="py-5 container" id="qa">
+    <section class="py-5 container slideanim" id="qa">
         <h2 class="title-16">Питання</h2>
         <h4 id="descrip-15">
             Відповіді на найпоширеніші запитання. Якщо виникнуть додаткові
@@ -213,7 +213,7 @@
     </section>
 
     <!-- Registration -->
-    <section class="py-5 container" id="contacts">
+    <section class="py-5 container mov_slideInRight" id="contacts">
         <div class="row text-center">
             <div class="col-lg-12 col-md-8 mx-auto heading">
                 <h2 class="title-16">Реєстрація</h2>
@@ -225,7 +225,9 @@
         <div class="col-sm-7" id="registration">
             <h4 class="form-title">Реєстрація</h4>
             <div class="contact-form">
-                <form role="form" id="contact" class="contact-form" method="post">
+                <form role="form" id="contact" class="contact-form was-validated" method="post"
+                    name="submit-to-google-sheet"
+                    action="https://script.google.com/macros/s/AKfycbwa4G_wxLO61UoD2Qj2lohs8x52aVeGyRR7OgsKXr0ufnHYVBIoWGjlfW7cux8cUw04/exec">
                     <div class="row">
                         <div class="col-sm-6">
                             <input class="form-control" id="name" name="name"
@@ -233,7 +235,7 @@
                                 placeholder="First name" type="text" required />
                         </div>
                         <div class="col-sm-6">
-                            <input class="form-control" id="surname" name="name"
+                            <input class="form-control" id="surname" name="surname"
                                 pattern="([ёЁіІїЇҐґЄєa-zA-Zа-яА-Я][\sёЁіІїЇҐґЄєa-zA-Zа-яА-Я0-9.-]+){1,255}"
                                 placeholder="Last name" type="text" required />
                         </div>
@@ -244,12 +246,13 @@
                                 placeholder="Email" type="email" required />
                         </div>
                         <div class="col-sm-12">
-                            <input class="form-control" id="tel" name="tel" pattern="[0-9]{10}" placeholder="Phone"
-                                type="tel" required />
+                            <input class="form-control phone" id="tel" name="phone" placeholder="+38 (___) ___ ____"
+                                type="tel" title="Формат: (099) 999 9999" required />
                         </div>
 
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-start">
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" id="btn-registr" href="#">Взяти участь</a>
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" id="btn-registr" data-bs-toggle="modal"
+                                data-bs-target="#confirm-modal" href="#">Взяти участь</a>
                         </div>
                         <div class="fields2"></div>
                     </div>
@@ -308,33 +311,172 @@
                     </div>
                 </div>
                 <div class="up d-flex justify-content-center col-md-2">
-                    <a href="#" title="To Top" class="text-center flex-column d-flex justify-content-center arrow-up">
-                        <img src="./img/arrow-up.png" alt="">
+                    <a href="#top" title="To Top" class="text-center flex-column d-flex justify-content-center arrow-up"
+                        id="totop">
+                        <img src="./img/arrow-up.png" alt="To Top">
                     </a>
                 </div>
             </div>
             <div class="social">
                 <ul class="social-icon d-flex flex-row gap-4 justify-content-center">
-                    <li><a href="#"><img src="img/youtube.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/telegram.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/youtube.png" alt="youtube"></a></li>
+                    <li><a href="#"><img src="img/instagram.png" alt="instagram"></a></li>
+                    <li><a href="#"><img src="img/facebook.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="img/telegram.png" alt="telegram"></a></li>
                 </ul>
             </div>
             <div class="copyright d-flex flex-column justify-content-between">
                 <p class="copyright">
-                    <a class="navbar-brand logo" href="#"><img src="img/logo-light.png" alt=""></a> © Copyright
+                    <a class="navbar-brand logo" href="#"><img src="img/logo-light.png" alt="logo"></a> © Copyright
                 </p>
             </div>
         </div>
     </footer>
 
+    <!-- The Modal 1-->
+    <div class="modal" id="registration-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Реєстрація</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="contact-form">
+                        <form role="form" id="contact" class="contact-form was-validated" method="post"
+                            name="submit-to-google-sheet-modal"
+                            action="https://script.google.com/macros/s/AKfycbwa4G_wxLO61UoD2Qj2lohs8x52aVeGyRR7OgsKXr0ufnHYVBIoWGjlfW7cux8cUw04/exec">
+                            <div class="row">
+
+
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="name" name="name"
+                                        pattern='([ёЁіІїЇҐґЄєa-zA-Zа-яА-Я][\sёЁіІїЇҐґЄєa-zA-Zа-яА-Я0-9.-]+){1,255}'
+                                        placeholder="First name" type="text" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="surname" name="surname"
+                                        pattern='([ёЁіІїЇҐґЄєa-zA-Zа-яА-Я][\sёЁіІїЇҐґЄєa-zA-Zа-яА-Я0-9.-]+){1,255}'
+                                        placeholder="Last name" type="text" required>
+                                </div>
+
+
+                                <div class="col-sm-12">
+                                    <input class="form-control" id="email" name="email"
+                                        pattern='([a-zA-Z0-9_.-]+)@([a-zA-Z0-9.-]+){2,255}.?([a-zA-Z]+){2,10}'
+                                        placeholder="Email" type="email" required>
+                                </div>
+                                <div class="col-sm-12">
+                                    <input class="form-control phone" id="tel" name="phone" pattern='[0-9]{10}'
+                                        placeholder="+38 (___) ___ ____" type="tel" title="Формат: (099) 999 9999"
+                                        required>
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-start">
+                                        <a class="btn btn-primary btn-lg px-4 me-sm-3" id="btn-modal-registr"
+                                            data-bs-toggle="modal" data-bs-target="#confirm-modal">Взяти
+                                            участь</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal 2-->
+    <div class="modal" id="confirm-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+                <!-- Modal Header -->
+                <div class="modal-header d-flex justify-content-center">
+                    <h4 class="modal-title">Confirmation message</h4>
+                </div>
+
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Реєстрація успішно здійснена! Ви отримали місце на безкоштовному уроці. Очікуйте надзвичайно цікавої
+                    та пізнавальної
+                    програми!
+                    <br>
+                    <img src="./img/confirm-icon.svg" alt="confirm icon" class="confirm-icon">
+                </div>
+
+
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-center">
+                    <div class="d-grid gap-3">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" id="btn-return"
+                            data-bs-dismiss="modal">Повернутися на сайт <img src="./img/arrow-return.svg"
+                                alt="arrow return" class="arrow-return"></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal 3-->
+    <div class="modal" id="error-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+                <!-- Modal Header -->
+                <div class="modal-header d-flex justify-content-center">
+                    <h4 class="modal-title">Error message</h4>
+                </div>
+
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    На жаль, щось пішло не так... Будь ласка, спробуйте ще раз або зверніться до нашої служби підтримки!
+                    <br>
+                    <img src="./img/error-icon.svg" alt="error icon" class="error-icon">
+                </div>
+
+
+                <!-- Modal footer -->
+                <div class="modal-footer d-flex justify-content-center">
+                    <!-- <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button> -->
+                    <div class="d-grid gap-3">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" id="btn-return"
+                            data-bs-dismiss="modal">Повернутися
+                            на сайт <img src="./img/arrow-return.svg" alt="arrow return" class="arrow-return"></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Links -->
+
+    <!-- Owl JS -->
+    <script src="./owlcarousel/assets/vendors/jquery.min.js"></script>
+    <script src="./owlcarousel/assets/owlcarousel/owl.carousel.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
 
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
 
     <script>
         $(document).ready(function () {

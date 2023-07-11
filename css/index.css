@@ -83,7 +83,8 @@ a {
   line-height: 150%;
 }
 
-#btn-registr {
+#btn-registr,
+#btn-modal-registr {
   border-radius: 6px;
   width: 205px;
   height: 60px;
@@ -95,7 +96,8 @@ a {
   background-color: var(--accent);
 }
 
-#btn-registr:hover {
+#btn-registr:hover,
+#btn-modal-registr:hover {
   background-color: var(--secondary);
   color: var(--primary);
   border: none;
@@ -107,9 +109,10 @@ a {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("./img/hero-bg-2-1.png"),
+    url("/img/hero-bg-2-1.png"),
     lightgray -130.19px -104.662px / 109.254% 130.673% no-repeat;
   background-size: 100% 100%;
+  /* background-attachment: fixed; */
 }
 
 /* Slider */
@@ -137,16 +140,16 @@ h2 {
 }
 
 .owl-theme .owl-dots .owl-dot span {
-  background: url(./img/slide-point.png);
+  background: url("/img/slide-point.png");
   background-position: center center;
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
-  background: url(./img/slide-point-active.png);
+  background: url("/img/slide-point-active.png");
 }
 
 .owl-theme .owl-dots:hover .owl-dot span {
-  background: url(./img/slide-point-active.png);
+  background: url("/img/slide-point-active.png");
 }
 
 .owl-theme .owl-nav {
@@ -173,12 +176,12 @@ h2 {
 
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-prev:hover {
-  background: url(./img/prev.png);
+  background: url("/img/prev.png");
 }
 
 .owl-carousel .owl-nav button.owl-next,
 .owl-carousel .owl-nav button.owl-next:hover {
-  background: url(./img/next.png);
+  background: url("/img/next.png");
 }
 
 .owl-carousel .owl-nav button.owl-prev span,
@@ -256,7 +259,7 @@ h4 {
 
 .accordion-button::after,
 .accordion-button:not(.collapsed)::after {
-  background-image: url(img/q-down.png);
+  background-image: url("../img/q-down.png");
 }
 
 #question {
@@ -421,6 +424,17 @@ footer .logo {
     margin-left: 45px;
   }
 
+  #btn-modal-registr {
+    padding-top: 6px;
+    padding-left: 15px !important;
+    padding-right: 20px !important;
+    width: 160px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: var(--accent);
+  }
+
   .btn-contact {
     padding: 7px 12px !important;
   }
@@ -482,4 +496,80 @@ footer .logo {
     height: 40px;
     padding-right: 4px;
   }
+}
+
+/* Modal */
+.modal h4 {
+  padding-bottom: 0;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-title {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.modal-body {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.modal-footer {
+  border: none;
+}
+
+#btn-return {
+  padding: 12px 20px;
+  border-radius: 6px;
+  background: var(--accent);
+  width: 330px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+#btn-return:hover {
+  color: var(--primary);
+  background: var(--secondary);
+  border: none;
+}
+
+.arrow-return {
+  margin-left: 15px;
+}
+
+.confirm-icon,
+.error-icon {
+  padding-top: 20px;
+}
+
+/* Animation Effects */
+.slideanim {
+  visibility: hidden;
+}
+
+.slide {
+  animation-name: slide;
+  animation-duration: 1s;
+  visibility: visible;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+#contacts {
+  animation-duration: 2s;
+  animation-delay: 2s;
 }

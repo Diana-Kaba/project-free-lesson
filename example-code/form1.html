@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        function subForm() {
+            $.ajax({
+                url: 'https://api.apispreadsheets.com/data/7NAlo6z8OsfcUgkP/',
+                type: "post",
+                data: $("#form1").serializeArray(),
+                success: function () {
+                    alert("Form Data Submitted :)")
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form1">
+        <input type="text" name="name" placeholder="Name" /><input type="text" name="surname"
+            placeholder="Surname" /><br />
+        <input type="email" name="email" placeholder="email" /><br />
+        <input type="tel" name="phone" placeholder="phone" />
+    </form>
+    <button onclick="subForm()">Send</button>
+</body>
+
+</html>
