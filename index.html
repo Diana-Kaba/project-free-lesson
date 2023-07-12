@@ -225,19 +225,19 @@
         <div class="col-sm-7" id="registration">
             <h4 class="form-title">Реєстрація</h4>
             <div class="contact-form">
-                <form role="form" id="contact" class="contact-form was-validated" method="post"
+                <form role="form" id="contacts" class="contact-form was-validated" method="post"
                     name="submit-to-google-sheet"
-                    action="https://script.google.com/macros/s/AKfycbwa4G_wxLO61UoD2Qj2lohs8x52aVeGyRR7OgsKXr0ufnHYVBIoWGjlfW7cux8cUw04/exec">
+                    action="https://script.google.com/macros/s/AKfycbyVaFncmFV35wCY7n7QMZcuVboRkbBfmSU3hTe-znnRUNpzqHao1XWQTsJTODlEVrQD/exec">
                     <div class="row">
                         <div class="col-sm-6">
                             <input class="form-control" id="name" name="name"
                                 pattern="([ёЁіІїЇҐґЄєa-zA-Zа-яА-Я][\sёЁіІїЇҐґЄєa-zA-Zа-яА-Я0-9.-]+){1,255}"
-                                placeholder="First name" type="text" required />
+                                placeholder="First name" type="name" required />
                         </div>
                         <div class="col-sm-6">
                             <input class="form-control" id="surname" name="surname"
                                 pattern="([ёЁіІїЇҐґЄєa-zA-Zа-яА-Я][\sёЁіІїЇҐґЄєa-zA-Zа-яА-Я0-9.-]+){1,255}"
-                                placeholder="Last name" type="text" required />
+                                placeholder="Last name" type="surname" required />
                         </div>
 
                         <div class="col-sm-12">
@@ -246,7 +246,7 @@
                                 placeholder="Email" type="email" required />
                         </div>
                         <div class="col-sm-12">
-                            <input class="form-control phone" id="tel" name="phone" placeholder="+38 (___) ___ ____"
+                            <input class="form-control phone" id="tel" name="tel" placeholder="+38 (___) ___ ____"
                                 type="tel" title="Формат: (099) 999 9999" required />
                         </div>
 
@@ -373,9 +373,9 @@
                                         placeholder="Email" type="email" required>
                                 </div>
                                 <div class="col-sm-12">
-                                    <input class="form-control phone" id="tel" name="phone" pattern='[0-9]{10}'
+                                    <input class="form-control phone" id="tel" name="phone"
                                         placeholder="+38 (___) ___ ____" type="tel" title="Формат: (099) 999 9999"
-                                        required>
+                                        required />
                                 </div>
                                 <div class="col-sm-12 form-group">
                                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-start">

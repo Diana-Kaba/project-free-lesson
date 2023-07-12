@@ -3,10 +3,9 @@ const slides = [
   "img/slides-art.png",
   "img/slides-site.jpg",
   "img/slides-hand.jpg",
-  "img/slides-code.jpg",
-  "img/slides-art.png",
-  "img/slides-site.jpg",
-  "img/slides-hand.jpg",
+  "../img/slides-code-2.jpg",
+  "../img/slides-hand-3.jpg",
+  "../img/slides-language.png",
 ];
 
 $(function () {
@@ -42,7 +41,6 @@ $(function () {
         $(this).addClass("animate__animated animate__slideInRight"); // додаємо до блоку клас з анімацією slideInRight
       }
     });
-    s;
   });
 
   $(".phone").mask("+38 (999)-999-9999", {
