@@ -55,16 +55,12 @@ $(function () {
   function sendDataToGoogleSheet(form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      fetch(form.action, {
-        method: "Post",
-        body: new FormData(form),
-      })
+      fetch(form.action, { method: "POST", body: new FormData(form) })
         .then((response) => {
           $("#registration-modal").modal("hide");
           $("#confirm-modal").modal("show");
           form.reset();
         })
-
         .catch((error) => {
           $("#registration-modal").modal("hide");
           $("#error-modal").modal("show");
