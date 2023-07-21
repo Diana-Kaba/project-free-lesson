@@ -47,6 +47,10 @@ $(function () {
     autoсlear: false,
   });
 
+  $("#btn-modal-registr").click(function () {
+    $("#registration-modal").modal("hide");
+  });
+
   const formModal = document.forms["submit-to-google-sheet-modal"];
   sendDataToGoogleSheet(formModal);
   const form = document.forms["submit-to-google-sheet"];
@@ -57,8 +61,6 @@ $(function () {
       e.preventDefault();
       fetch(form.action, { method: "POST", body: new FormData(form) })
         .then((response) => {
-          $("#registration-modal").modal("hide");
-          $("#confirm-modal").modal("show");
           form.reset();
         })
         .catch((error) => {
