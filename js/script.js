@@ -4,7 +4,7 @@ const slides = [
   "img/slides-site.jpg",
   "img/slides-hand.jpg",
   "../img/slides-code-2.jpg",
-  "../img/slides-hand-3.jpg",
+  "../img/slides-hand-2.jpg",
   "../img/slides-language.png",
 ];
 
